@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --primary-color: #e26e70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-button {
+    border: none;
+    outline: none;
+    padding: 20px 30px;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.open-button:hover {
+    scale: 95%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hide{
+    display: none;
+}
+
+.modal__inner{
+    width: 450px;
+    /* height: 400px; */
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 150px auto;
+    overflow: hidden;
+    animation: showModal linear 0.2s;;
+}
+
+@keyframes showModal{
+    from{
+        scale: 0%;
+        opacity: 0;
+    }
+    to {
+        scale: 100%;
+        opacity: 1;
+    }
+}
+
+.modal__header{
+    width: 100%;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__header i{
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.modal__header i:hover{
+    opacity: 0.75;
+}
+
+.modal__body{
+    padding: 15px;
+}
+
+h2{
+    color: var(--primary-color);
+}
+
+.modal__footer{
+    padding: 15px;
+    text-align: right;
+}
+
+.modal__footer .close-button{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.modal__footer .close-button:hover{
+    opacity: 0.75;
+}
